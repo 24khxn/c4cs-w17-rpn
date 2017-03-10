@@ -5,6 +5,9 @@ def calculate(arg):
 	for operand in arg.split():
 		if operand == "+":
 			stack.append(stack.pop() + stack.pop())
+		elif operand == "-":
+			first = stack.pop()
+			stack.append(stack.pop() - first)
 		else:
 			stack.append(float(operand))
 	return stack.pop()
