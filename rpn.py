@@ -2,6 +2,8 @@
 
 def calculate(arg):
 	pass
+	#new_ar = 
+	
 
 def main():
 	while True:
