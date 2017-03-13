@@ -1,6 +1,5 @@
 language: python3
 python:
     - "3.5"
-#git hello
 script: python3 make test
 
