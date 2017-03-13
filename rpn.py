@@ -29,8 +29,12 @@ def calculate(arg):
 
 def main():
 	while True:
-		result = calculate(input("rpn calc> "))
-		print("Result: ", result)
+		try:
+			inpu = input("rpn calc> ")
+			result = calculate(inpu)
+			print("Result: ", result)
+		except:
+			print "Malformed input, try again"
 
 if __name__ == '__main__':
 	main()
