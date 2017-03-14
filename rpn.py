@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import operator
+import operator, readline
 	
 OPERATORS = {
 	'+': operator.add,
@@ -31,10 +31,12 @@ def main():
 	while True:
 		try:
 			inpu = input("rpn calc> ")
+			if(inpu == 'e'):
+				break
 			result = calculate(inpu)
 			print("Result: ", result)
 		except:
-			print "Malformed input, try again"
+			print ("Malformed input, try again")
 
 if __name__ == '__main__':
 	main()
