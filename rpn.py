@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import operator, readline
+from lazyme.string import color_print
 	
 OPERATORS = {
 	'+': operator.add,
@@ -10,6 +11,15 @@ OPERATORS = {
 	'^': operator.pow,
 	
 }
+
+def print_my_name_and_add_bullshit():
+	vi = 4
+	v = 3
+	q = vi + v
+	print("Sheehan")
+	print("wow")
+	print(vi + q)
+	print(vi) 
 
 def calculate(arg):
 	stack = list()	
@@ -34,7 +44,10 @@ def main():
 			if(inpu == 'e'):
 				break
 			result = calculate(inpu)
-			print("Result: ", result)
+			if(result < 0):
+				color_print(result, color='red')
+			else:
+				color_print(result, color='blue')
 		except:
 			print ("Malformed input, try again")
 
