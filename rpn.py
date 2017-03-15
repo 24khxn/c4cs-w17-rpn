@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import operator, readline
-from lazyme.string import color_print
 	
 OPERATORS = {
 	'+': operator.add,
@@ -44,10 +43,7 @@ def main():
 			if(inpu == 'e'):
 				break
 			result = calculate(inpu)
-			if(result < 0):
-				color_print(result, color='red')
-			else:
-				color_print(result, color='blue')
+			print(result)
 		except:
 			print ("Malformed input, try again")
 
